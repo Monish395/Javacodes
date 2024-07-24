@@ -1,4 +1,14 @@
+//type casting
 
+public class Main{
+public static void main(String[] args) {
+String name="John";
+int myint = 395;
+double mydouble = myint;
+System.out.println("int : "+myint);
+System.out.println("double : "+mydouble);
+}
+}
 
 
 //operator -> +
