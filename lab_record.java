@@ -350,10 +350,13 @@ import java.util.Scanner;
 public class calculator {
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
+        int choice,flag=0;
+        float num,res=0;
+
         System.out.println(">>>>>>>>>>>>>>> Calculator <<<<<<<<<<<<<<<<\n");
         while (true) {
+            boolean flag_2=true;
             System.out.println("Menu\n\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n");
-            int choice,num1,num2;
 
             System.out.print("Enter choice for operation : ");
             choice = in.nextInt();
@@ -368,36 +371,38 @@ public class calculator {
             }
 
             else{
-                System.out.print("Enter 1st number  : ");
-                num1 = in.nextInt();
-                System.out.print("Enter 2nd number : ");
-                num2 = in.nextInt();
-            
+                if(flag == 0){
+                System.out.print("Enter number  : ");
+                num = in.nextInt();
+                res = num;
+                }
+
+                System.out.print("Enter number  : ");
+                num = in.nextInt();
+
                 switch (choice) {
 
                 case 1:
-                int sum = num1+num2;
-                System.out.println(num1+" + "+num2+" = "+ sum);
+                res += num;
                 break;
 
                 case 2:
-                int diff = num1-num2;
-                System.out.println(num1+" - "+num2+" = "+ diff);
+                res -= num;
                 break;
 
                 case 3:
-                int mul = num1*num2;
-                System.out.println(num1+" x "+num2+" = "+ mul);
+                res *= num;
                 break;
 
                 case 4:
-                if (num2==0){
-                System.out.println("Can't divide by Zero");
-                break;
+                if (num==0){
+                    flag_2=false;
+                    System.out.println("Can't divide by Zero");
+                    break;
                 }
+
                 else{
-                float div = (float)num1/(float)num2;
-                System.out.println(num1+" / "+num2+" = "+ div);
+                res /= (float)num;
                 break;
                 }
 
@@ -405,6 +410,8 @@ public class calculator {
                 continue;
                 }
 
+                if (flag_2)
+                System.out.println("Total = "+res);
                 System.out.print("\nDo you want to continue(y/n) : ");
                 char ctn;
                 ctn=in.next().charAt(0);
@@ -412,6 +419,8 @@ public class calculator {
                     System.out.println("Exiting...");
                     break;
                 }
+                
+                flag++;
 
             }
             
@@ -420,4 +429,3 @@ public class calculator {
     } 
     
 }
-
