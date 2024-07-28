@@ -343,3 +343,81 @@ System.out.println(hellostring);
 }
 }
 
+//Calculator
+
+import java.util.Scanner;
+
+public class calculator {
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        System.out.println(">>>>>>>>>>>>>>> Calculator <<<<<<<<<<<<<<<<\n");
+        while (true) {
+            System.out.println("Menu\n\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n");
+            int choice,num1,num2;
+
+            System.out.print("Enter choice for operation : ");
+            choice = in.nextInt();
+
+            if (choice == 5){
+                System.out.println("Exiting...");
+                break;  
+            }
+
+            else if(choice > 5){
+                System.out.println("Invalid Choice\n");
+            }
+
+            else{
+                System.out.print("Enter 1st number  : ");
+                num1 = in.nextInt();
+                System.out.print("Enter 2nd number : ");
+                num2 = in.nextInt();
+            
+                switch (choice) {
+
+                case 1:
+                int sum = num1+num2;
+                System.out.println(num1+" + "+num2+" = "+ sum);
+                break;
+
+                case 2:
+                int diff = num1-num2;
+                System.out.println(num1+" - "+num2+" = "+ diff);
+                break;
+
+                case 3:
+                int mul = num1*num2;
+                System.out.println(num1+" x "+num2+" = "+ mul);
+                break;
+
+                case 4:
+                if (num2==0){
+                System.out.println("Can't divide by Zero");
+                break;
+                }
+                else{
+                float div = (float)num1/(float)num2;
+                System.out.println(num1+" / "+num2+" = "+ div);
+                break;
+                }
+
+                default:
+                continue;
+                }
+
+                System.out.print("\nDo you want to continue(y/n) : ");
+                char ctn;
+                ctn=in.next().charAt(0);
+                if((ctn == 'n')||(ctn == 'N')){
+                    System.out.println("Exiting...");
+                    break;
+                }
+
+            }
+            
+        }
+
+    } 
+    
+}
+
