@@ -77,6 +77,87 @@ System.out.println("index : "+txt.indexOf("locate"));
 }
 }
 
+//string concatenation
+
+public class Main {
+    public static void main(String args[]){
+        String firstname = "john";
+        String lastname = "doe";
+        System.out.println(firstname+" "+lastname);
+    }
+}
+
+//string concatenation 2
+
+public class Main {
+    public static void main(String args[]){
+        String firstname = "john";
+        String lastname = "doe";
+        System.out.println(firstname.concat(lastname));
+    }
+}
+
+// String concatenation 3
+
+public class Main {
+    public static void main(String args[]){
+        String x = "10";
+        int y = 20;
+        String z= x+y;
+        System.out.println(z);
+    }
+}
+
+//Escape sequence “/”
+
+public class Main {
+    public static void main(String args[]){
+        String x = "we are so called \"vikings\"" +
+                "from the north";
+        System.out.println(x);
+    }
+}
+
+// Math - max
+
+public class Main {
+    public static void main(String args[]){
+        System.out.println(Math.max(5,10));
+    }
+}
+
+//Math - min
+
+public class Main {
+    public static void main(String args[]){
+        System.out.println(Math.min(5,10));
+    }
+}
+
+//Math – sqrt
+
+public class Main {
+    public static void main(String args[]){
+        System.out.println(Math.sqrt(64));
+    }
+}
+
+//Math – absolute
+
+public class Main {
+    public static void main(String args[]){
+        System.out.println(Math.abs(-4.561));
+    }
+}
+
+//Math -  random
+
+public class Main {
+    public static void main(String args[]){
+        System.out.println(Math.random());
+    }
+}
+
 //boolean
 
 public class Main{
@@ -87,8 +168,6 @@ System.out.println(isjavafun);
 System.out.println(isfishtasty);
 }
 }
-
-
 
 //boolean expression
 
@@ -117,8 +196,6 @@ System.out.println("20 greeater than 18");
 }
 }
 
-
-
 //if - else statement
 
 public class Main{
@@ -130,8 +207,6 @@ else
 System.out.println("good evening");
 }
 }
-
-
 
 //if - elseif - else statement
 
@@ -146,8 +221,6 @@ else
 System.out.println("good evening");
 }
 }
-
-
 
 //switch case
 
@@ -201,8 +274,6 @@ i++;
 }
 }
 
-
-
 //do while
 
 public class Main{
@@ -215,8 +286,6 @@ i++;
 while(i<5);
 }
 }
-
-
 
 //for loop
 
@@ -263,3 +332,14 @@ username=myobj.nextLine();
 System.out.println("username is : "+username);
 }
 }
+
+//strings
+
+public class Main{
+public static void main(String[] args){
+char[] helloarray = {'h','e','l','l','o'};
+String hellostring = new String(helloarray);
+System.out.println(hellostring);
+}
+}
+
